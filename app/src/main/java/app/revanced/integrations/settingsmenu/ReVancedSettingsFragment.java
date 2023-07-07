@@ -580,7 +580,7 @@ public class ReVancedSettingsFragment extends PreferenceFragment {
 
         var intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("application/json");
+        intent.setType("*/*");
         intent.putExtra(Intent.EXTRA_TITLE, fileName);
         startActivityForResult(intent, WRITE_REQUEST_CODE);
     }
@@ -591,7 +591,7 @@ public class ReVancedSettingsFragment extends PreferenceFragment {
     private void importActivity() {
         var intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("application/json");
+        intent.setType("*/*");
         startActivityForResult(intent, READ_REQUEST_CODE);
     }
 
